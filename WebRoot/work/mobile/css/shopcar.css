@@ -1,0 +1,110 @@
+body,html{height: 100%;width: 100%;}
+body{font-family: Microsoft YaHei;background-color: #f0f0f0}
+a{text-decoration: none!important;}
+
+.sh-top{
+	width: 100%;
+	z-index: 1005;
+	position: fixed;
+	top: 0px;
+}
+.sh-top .top-con{
+	width: 100%;
+	background-color: #f8f8f8;
+	box-shadow: 0 1px 2px #cfcfcf;
+	padding: 6px 0px;
+}
+.top-con>div{font-size: 14px;color: #999;text-align: center;padding-top: 5px;}
+.top-con .sh-icon-left{text-align: left;display: block;}
+.sh-icon-left>i{font-size: 22px;color: #333}
+.top-con .sh-icon-right{text-align: right;display: block;}
+.sh-icon-right>i{font-size: 22px;color: #333}
+.top-con .con-sec{text-align: left!important;padding: 0px;display: none;}
+.con-sec .sec-inp{
+	display: inline-block;
+	border: 1px solid #ddd;
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 0px 5px;
+	width: 75%;
+}
+.con-sec .sec-inp>a{color: #777;display: inline-block;}
+.con-sec .sec-inp>input{width: 86%;border: none;font-size: 12px;line-height: 24px;}
+.con-sec .sec-btn{padding: 6px 10px;font-size: 12px;background-color: #E70012;color: #fff;border-radius: 5px;}
+
+.rec-ad{
+	background-color: #fff;
+	border: 1px solid #ddd;
+	margin-top: 15px;
+	padding: 10px 0px 5px 0px;
+	position: relative;
+}
+.rec-ad>div{margin-bottom: 5px;}
+.rec-ad>div span{font-size: 12px;}
+.rec-ad .ad-left{padding-left: 10px;padding-right: 0px;}
+.rec-ad .ad-right{padding-left: 0px;}
+.rec-ad .ad-btn{
+	position: absolute;
+	display: inline-block;
+	font-size: 16px;
+	right: 10px;
+	top: 40%;
+}
+.rec-ad .ad-btn>span{color: #E70012}
+.rec-ad .ad-btn>i{color: #333}
+
+.rec-pr{margin-top: 15px;}
+.rec-pr .pr-item{background-color: #fff;border: 1px solid #ddd;margin-top: 10px;}
+.pr-item>div{border-bottom: 1px solid #ddd;}
+.pr-item>div:LAST-CHILD{border: none!important;}
+.pr-item .item-sh{padding: 10px 0px;}
+.pr-item .item-sh .sh-left{padding-right: 0px;}
+.item-sh .sh-left i{color: #E70012;font-size: 18px;}
+.item-sh .sh-left span{color: #999;font-size: 16px;}
+.pr-item .item-sh .sh-right{padding-left: 0px;text-align: right;}
+.item-sh .sh-right .delpr{color: #E70012;font-size: 18px;}
+.pr-item .item-con{line-height: 46px;}
+.item-con .con-left{padding-right: 10px;padding-left: 10px;}
+.item-con .con-right{padding-left: 0px;padding-right: 10px;text-align: right;}
+.item-con .btn-add>i{color: #E70012;font-size: 30px;}
+.item-con .btn-del>i{color: #999;font-size: 30px;}
+.item-con .con-right>span{font-size: 18px;}
+.item-con .con-cou{
+	border: none;
+	display: inline-block;
+	width: 35px;
+	text-align: center;
+	font-size: 20px;
+}
+.con-cou.text{text-align: center;}
+
+.rec-bt{width: 100%;border-top: 1px solid #ddd;position: fixed;bottom: 0px;z-index: 1005;}
+.rec-bt .bt-tot{padding: 0px 0px 0px 10px;background-color: #fff;line-height: 53px;}
+.rec-bt .bt-tot>span{font-size: 16px;color: #E70012}
+.rec-bt .bt-btn{padding: 0px;}
+.rec-bt .bt-btn>a{
+	background-color:  #E70012;
+	color: #fff;
+	display: block;
+	text-align: center;
+	padding: 16px 0px;
+	font-size: 16px;
+}
+
+
+.space54{height: 54px;}
+.space41{height: 41px;}
+@font-face {font-family: 'iconfont';
+    src: url('/nanny/fonts/iconfont-gl.eot'); /* IE9*/
+    src: url('/nanny/fonts/iconfont-gl.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/nanny/fonts/iconfont-gl.woff') format('woff'), /* chrome、firefox */
+    url('/nanny/fonts/iconfont-gl.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('/nanny/fonts/iconfont-gl.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont-gl{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,42 @@
+.emptyState span {
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	border-radius: 100%;
+	background-color: #c7c2bc;
+}
+
+.emptyState span i {
+	color: #fff;
+	font-size: 4rem;
+}
+
+.storeManage-goodsbox-list-state {
+	background-color: #f6f6f6;
+}
+
+body {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: #f6f6f6;
+}
+
+.space-44{height: 44px;}
+
+@font-face {font-family: 'iconfont';
+    src: url('../icon/iconfont-my.eot'); /* IE9*/
+    src: url('../icon/iconfont-my.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../icon/iconfont-my.woff') format('woff'), /* chrome、firefox */
+    url('../icon/iconfont-my.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../icon/iconfont-my.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont-my{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+ }
+ .storeManage-sellerInfo{margin-top: 0px!important;}

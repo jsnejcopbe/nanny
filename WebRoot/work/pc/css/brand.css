@@ -1,0 +1,40 @@
+.edit-modal{
+	margin:0px!important;
+	top:10%!important;
+}
+
+.edit-modal img{width: 100%;display: block;margin-bottom: 10px;max-height: 357px;}
+
+.up_file{
+	position:absolute!important;
+	left:0!important;
+	top:0!important;
+	width:90%!important;
+	height:100%!important;
+	/* font-size: 100px!important; */
+	z-index:999!important;
+	opacity:0!important;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0)!important;
+	cursor: pointer;
+}
+.up_btn{
+	position: relative;
+	display:block;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.input-group>input{
+    border-top-right-radius: 0px!important;
+    border-bottom-right-radius: 0px!important;
+}
+.input-group-addon, .input-group-btn, .input-group .form-control {
+    display: table-cell;
+}
+
+.pagin-area {text-align: center;}
+.js-pagin{display: inline-block!important;float: none!important;}
+
+.btn_h{
+	padding: 10px;
+}

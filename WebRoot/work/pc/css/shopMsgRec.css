@@ -1,0 +1,52 @@
+html,body{height: 100%;width: 100%;}
+body{font-family: Microsoft YaHei;}
+a{text-decoration: none!important;}
+a:HOVER {text-decoration: none!important;}
+
+.panel-archon{border: 1px solid #ddd;}
+
+.pa-title{margin-top: 0px;color: rgb(103, 106, 108);}
+.pa-search .input-group{float: left;}
+.pa-search .input-group:LAST-CHILD{padding-left: 10px;}
+.pa-search .input-group>.input{
+	border-bottom-right-radius: 0px;
+	border-top-right-radius: 0px;
+	border-right: none;
+}
+.pa-search .input-group-btn>button{
+	line-height: 21px;
+	border-bottom-left-radius: 0px;
+	border-top-left-radius: 0px;
+}
+
+.con-list{margin-top: 20px;}
+.con-list tr td{
+	height: 46px;
+	vertical-align: middle;
+	border: none;
+	color: rgb(103, 106, 108);
+}
+.con-img img{
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+}
+.con-name span{color: rgb(35, 82, 124);font-weight: bold;}
+
+.msg-stm .stm-item{margin-bottom: 20px;}
+.stm-item>div{display: inline-block;}
+.stm-item .it-left{padding: 0px;}
+.stm-item .it-left>img{border: 1px solid #ddd;height: 70px;width: 70px;}
+.stm-item .it-right{padding: 10px;border: 1px solid #ddd;}
+.it-right .na-cl span:FIRST-CHILD {color: #337ab7;}
+.it-right .na-cl span:LAST-CHILD{color: #999;font-size: 12px;}
+
+
+.label-primary {
+    background-color: #1ab394;
+    color: #FFF;
+}
+.label-warning{
+	background-color: #f8ac59;
+    color: #FFF;
+}

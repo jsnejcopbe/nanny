@@ -1,0 +1,25 @@
+.ti-panel .ti-top{padding: 15px;color: #4EABD4;font-size: 20px;border-bottom: 1px solid #4EABD4;}
+.ti-panel .ti-con{text-align: center;margin-top: 10px;}
+.ti-panel .ti-con .con-item{display: inline-block;}
+.ti-panel .ti-con .con-item>p{margin: 0px;}
+.ti-panel .ti-con .ti-btn{
+	width:80px;
+	background-color: #E4E4E4;
+	font-size: 16px;
+	font-weight: bold;
+	color: #000;
+	text-align: center;
+	padding: 5px 0px;
+	display: block;
+}
+.ti-panel .ti-con .ti-time{background-color: #F0EFF4;width: 80px;padding: 5px 0px;font-weight: bold;}
+.ti-panel .ti-bot{margin-top: 10px;}
+.ti-panel .ti-bot>a{
+	width: 49%;
+	display: inline-block;
+	text-align: center;
+	padding: 10px 0px;
+	border-top: 1px solid #E1E1E1;
+	color: #000;
+}
+.ti-panel .ti-bot>a:FIRST-CHILD{border-right: 1px solid #E1E1E1; width: 49%;margin-right: -3px;}

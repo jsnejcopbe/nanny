@@ -1,0 +1,159 @@
+*,:before,:after {
+	text-size-adjust:none;
+	-webkit-tap-highlight-color:rgba(0,0,0,0)
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td {
+	margin:0;
+	padding:0
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0
+}
+fieldset,img {
+	border:0
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+	font-style:normal;
+	font-weight:300
+}
+li {
+	list-style:none
+}
+caption,th {
+	text-align:left
+}
+h1,h2,h3,h4,h5,h6 {
+	font-size:100%;
+	font-weight:300
+}
+q:before,q:after {
+	content:""
+}
+abbr,acronym {
+	border:0;
+	font-variant:normal
+}
+sup {
+	vertical-align:text-top
+}
+sub {
+	vertical-align:text-bottom
+}
+input,textarea,select {
+	font-family:inherit;
+	font-size:inherit;
+	font-weight:inherit
+}
+input:password {
+	ime-mode:disabled
+}
+:focus {
+	outline:0
+}
+body,input,textarea,select,button {
+	font-size:16px;
+	line-height:1.5;
+	color:#333;
+	font-family:"Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+	font-weight:300
+}
+html,body {
+	-webkit-touch-callout:none;
+	-ms-touch-callout:none
+}
+body {
+	padding:0;
+	margin:10px
+}
+h5 {
+	margin-top:10px
+}
+.fn-hide {
+	display:none
+}
+.am-logo {
+	margin-bottom:10px
+}
+.am-msg-box {
+	margin-bottom:10px;
+	padding:5px;
+	border:1px solid red;
+	background-color:#FDEEE9
+}
+.am-header h1 {
+	padding:0 5px;
+	font-size:16px;
+	font-weight:900;
+	border-top:1px solid #07F;
+	border-bottom:1px solid #07F;
+	background-color:#8EA9F6
+}
+.am-header .title-sub {
+	font-size:13px;
+	font-weight:300
+}
+dl {
+	margin:6px 0;
+	padding:0
+}
+dt {
+	display:inline-block
+}
+dd {
+	margin:0 0 0 10px;
+	display:inline-block;
+	color:#A0A0A0
+}
+.line-bottom {
+	border-bottom:1px dashed #D3D3D3
+}
+.am-list {
+	padding:5px 0
+}
+button.am-button {
+	display:inline-block;
+	margin:4px 0;
+	padding:4px 8px;
+	text-align:center
+}
+.am-message {
+	margin:10px 0;
+	padding:10px;
+	background:#F2F4F6;
+	border:1px #E1E1E3 solid
+}
+.am-message p {
+	padding:0;
+	margin:0
+}
+.am-message-error {
+	border:1px solid red;
+	background-color:#FDEEE9
+}
+.am-message-success {
+	border:1px solid #028B41;
+	background-color:#BAFFBC
+}
+.footer {
+	border-top:1px solid #AEAEAE;
+	line-height:18px;
+	margin-top:10px;
+	padding:2px 4px;
+	font-size:12px
+}
+#ServerNum {
+	text-align:center;
+	color:#fff
+}
+.am-password-handy-security {
+	display:none
+}
+.am-message-sysError {
+	margin-top:30px;
+	text-align:center;
+	color:#999
+}
+.am-message-sysError img {
+	margin-bottom:15px
+}

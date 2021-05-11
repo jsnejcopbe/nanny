@@ -1,0 +1,78 @@
+body,html{height: 100%;width: 100%;}
+body{font-family: Microsoft YaHei;background-color: #f0f0f0}
+a{text-decoration: none!important;}
+
+.sh-top{
+	width: 100%;
+	z-index: 1005;
+	position: fixed;
+	top: 0px;
+}
+.sh-top .top-con{
+	width: 100%;
+	background-color: #f8f8f8;
+	box-shadow: 0 1px 2px #cfcfcf;
+	padding: 6px 0px;
+}
+.top-con>div{font-size: 14px;color: #999;text-align: center;padding-top: 5px;}
+.top-con .sh-icon-left{text-align: left;display: block;}
+.sh-icon-left>i{font-size: 22px;color: #333}
+.top-con .sh-icon-right{text-align: right;display: block;}
+.sh-icon-right>i{font-size: 22px;color: #333}
+
+.tbl-title{margin-top: 10px;background-color: #fff;padding: 5px 0px;border: 1px solid #ddd;}
+.tbl-title>div{
+	border-right: 1px solid #ddd;
+	text-align: center;
+	padding: 5px 0px;
+	color: #999
+}
+.tbl-title>div:LAST-CHILD{border: none!important;}
+
+.tbl-con{margin-top: 10px;border: 1px solid #ddd;background-color: #fff;}
+.tbl-con .con-item{padding: 10px 0px;border-bottom: 1px solid #ddd;}
+.tbl-con .con-item:LAST-CHILD{border: none!important;}
+.con-item .it-inc,.con-item .it-pri{padding: 0px;text-align: center;}
+.con-item div>input{border: none;display: block;width: 100%;text-align: center;}
+
+.bt-menu{
+	position: fixed;
+	width: 100%;
+	z-index: 1005;
+	background-color: #fff;
+	border-top: 1px solid #ddd;
+	bottom: 0px;
+}
+.bt-menu>div{padding: 0px;}
+.bt-menu .check-list>a{display: block;margin-left: 5px;margin: 3px;color: #999}
+.bt-menu .check-list>a i{font-size: 18px;vertical-align: middle;}
+.bt-menu .confirm-btn{
+	display: block;
+	height: 49px;
+	width: 100%;
+	text-align: center;
+	background-color: #E70012;
+	vertical-align: middle;
+	color: #fff;
+	font-size: 16px;
+    padding-top: 13px;
+}
+
+
+.btn-checked{color: #E70012!important;}
+.space43{height: 43px;}
+.space50{height: 50px;}
+@font-face {font-family: 'iconfont';
+    src: url('/nanny/fonts/iconfont-gl.eot'); /* IE9*/
+    src: url('/nanny/fonts/iconfont-gl.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/nanny/fonts/iconfont-gl.woff') format('woff'), /* chrome、firefox */
+    url('/nanny/fonts/iconfont-gl.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('/nanny/fonts/iconfont-gl.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont-gl{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}

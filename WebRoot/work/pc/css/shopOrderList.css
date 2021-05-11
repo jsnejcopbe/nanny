@@ -1,0 +1,22 @@
+.top-border .header-row>th{border: none;padding: 0px;vertical-align: middle;}
+
+.or-it{padding: 0px;}
+.or-it .it-tit{border: 1px solid #ddd;background-color: #F5F5F5;padding: 10px;border-bottom: none!important;}
+.or-it .it-tit>span{font-size: 12px;}
+.or-it .it-tit>span:FIRST-CHILD {font-weight: bold;}
+.or-it .it-tit>div{margin-top: -6px;}
+
+
+.it-con .td-total{
+	border-bottom: none!important;
+}
+.it-con .td-total-none{border-top: none!important;border-bottom: none!important;}
+.it-con .con-img>img{height: 100%;width: 100%;}
+.it-con .con-name{text-align: left;}
+
+.btn-area{text-align: center;}
+.btn-area>div{margin: 0px;}
+.btn-area .pagination{margin: 0px;}
+
+.fresh{display: inline-block;}
+.fresh>a{color: #999;}

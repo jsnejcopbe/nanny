@@ -1,0 +1,17 @@
+a,a:HOVER,a:ACTIVE,a:LINK{
+  	color: #000;
+  	cursor: pointer;
+  	text-decoration: none;
+}
+
+.w200{
+	width: 200px;
+	float: left;
+	margin-left: 20px;
+}
+
+.w100{
+	width: 100px;
+	float: left;
+	margin-left: 20px;
+} 

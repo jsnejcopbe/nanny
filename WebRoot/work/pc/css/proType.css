@@ -1,0 +1,42 @@
+
+.price-list .mix,
+.price-list .gap {
+    display: inline-block;
+    width: 49%;
+}
+.price-list .mix {
+    text-align: center;
+    margin-bottom: 2%;
+    padding: 0px 5px;
+    vertical-align: top;
+}
+
+
+@media all and (min-width: 420px) {
+    .price-list .mix,
+    .price-list .gap {
+        width: 32%;
+    }
+}
+@media all and (min-width: 640px) {
+    .price-list .mix,
+    .price-list .gap {
+        width: 23.5%;
+    }
+}
+
+.js-editsecclass{
+	font-size: 12px;
+	padding-top: 2px;
+	padding-left: 4px;
+	float: right;
+	color: rgb(84, 181, 223);
+}
+.show_btn{
+	padding: 6px 15px;
+}
+.show_btn>a{
+	border-radius: 15px;
+	padding: 4px;
+	text-decoration: none;
+}

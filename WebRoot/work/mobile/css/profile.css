@@ -1,0 +1,239 @@
+.m-pagecont {
+	background-color: #f3f4f7;
+	padding-bottom: 30px;
+}
+
+.m-editcard .m-fm-hd {
+	font-size: 1.2rem;
+	padding: 5px 10px;
+	margin-top: 10px;
+	color: #8f8f8f;
+}
+
+.m-faceitem .i-arrow {
+	margin-top: 10px;
+}
+
+.m-faceitem .fm-tle {
+	padding-top: 22px;
+}
+
+.m-editcard .m-face {
+	width: 40px;
+	height: 40px;
+	float: right;
+	margin-right: 10px;
+}
+
+.m-editcard .m-face img {
+	width: 100%;
+}
+
+.m-editcard .i-qrcode {
+	float: right;
+}
+
+.m-editcard .i-qrcode:after {
+	content: "\e632";
+	font-size: 2rem;
+	position: relative;
+	top: -4px;
+	color: #a1a1a1;
+	padding-right: 4px;
+}
+
+.m-editcard .ui-ipt {
+	color: #7f7f7f;
+}
+
+.m-pageswitch-cont .ui-switch {
+	float: right;
+	margin-top: 6px;
+}
+
+.m-pageswitch-cont .fm-link,.fm-addproperty {
+	color: #0079ff;
+	text-align: center;
+}
+
+.m-pageswitch-cont .fm-link .i-add:before,.fm-addproperty .i-add:before
+	{
+	content: "\e60c";
+	padding-right: 5px;
+}
+
+.ui-form-list .i-put {
+	display: block;
+	padding: 10px;
+	float: right;
+}
+
+.ui-form-list .i-put:after {
+	content: "\e646";
+	color: #ff3b30;
+	font-size: 2.2rem;
+}
+
+.ui-form-list .fm-cont .name h1 {
+	font-size: 1.4rem;
+	color: #2f2f2f;
+	line-height: 1.3;
+	margin-bottom: 5px;
+}
+
+.ui-form-list .fm-cont .name p {
+	font-size: 1.3rem;
+	color: #7f7f7f;
+}
+
+.ui-form-list .fm-cont .name p i {
+	color: #fba572;
+	margin-left: 5px;
+}
+
+.ui-form-list .fm-cont .name {
+	float: left;
+	padding: 12px 0;
+}
+
+.ui-form-list .fm-cont .uploadbox {
+	float: right;
+	position: relative;
+}
+
+.ui-form-list .fm-cont .upload {
+	float: right;
+	padding-top: 20px;
+	font-size: 1.4rem;
+	color: #7f7f7f;
+	position: relative;
+}
+
+.ui-form-list .fm-cont .uploadbox input {
+	z-index: 111;
+	position: absolute;
+	height: 22px;
+	width: 50px;
+	left: 0px;
+	top: 17px;
+	opacity: 0;
+}
+
+.ui-form-list .fm-cont .upload i {
+	color: #5ea9fc;
+	margin-right: 5px;
+}
+
+.ui-form-list .fm-cont .uploadRusult {
+	float: right;
+	padding: 20px 20px 0 0;
+}
+
+/*电话弹出*/
+.phone-select {
+	width: 100%;
+	min-height: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background: #fff;
+	overflow: auto;
+	z-index: 11111;
+	-webkit-transform: translate3d(100%, 0, 0);
+	transform: translate3d(100%, 0, 0);
+}
+
+.phone-select.m-open {
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+.phone-select h1 {
+	height: 44px;
+	line-height: 44px;
+	text-align: center;
+	box-shadow: 0 1px 2px #cfcfcf;
+	padding: 0 15px;
+	font-size: 1.4rem;
+	color: #000;
+	position: relative;
+}
+
+.phone-select h1 .back {
+	display: inline-block;
+	width: 50px;
+	text-align: left;
+	position: absolute;
+	top: 0;
+	left: 10px;
+}
+
+.phone-select h1 .back i {
+	font-size: 2rem;
+}
+
+.phone-select ul {
+	overflow: auto;
+	-webkit-box-flex: 1;
+	box-flex: 1;
+}
+
+.phone-select li {
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #e5e5e5;
+	padding: 0 15px;
+}
+
+.phone-select li .phoneName {
+	font-size: 1.6rem;
+	color: #030303;
+	margin-right: 10px;
+	float: left;
+}
+
+.phone-select li .phoneNum {
+	font-size: 1.4rem;
+	color: #030303;
+	float: right;
+}
+
+.fm-right select {
+	height: 30px;
+	margin-top: 5px;
+	border: none
+}
+
+.up_file {
+	height: 100%;
+	position: absolute !important;
+	left: 0 !important;
+	top: 0 !important;
+	z-index: 999 !important;
+	opacity: 0 !important;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0 ) !important;
+	cursor: pointer;
+	display: inline-block !important;
+}
+
+.up_btn {
+	position: relative;
+	font-size: 12px;
+	border: 2px solid #29A1F7;
+	height: 60px;
+	width: 60px;
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 20px;
+	text-align: center;
+	border-radius: 50%;
+	color: #29A1F7;
+}
+
+.btn-back {
+	background: none !important;
+	margin-top: 10px !important;
+	color: #0079ff !important;
+}

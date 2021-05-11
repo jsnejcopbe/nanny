@@ -1,0 +1,96 @@
+.emptyState span {
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	border-radius: 100%;
+	background-color: #c7c2bc;
+}
+
+.emptyState span i {
+	color: #fff;
+	font-size: 4rem;
+}
+
+.storeManage-goodsbox-list-state {
+	background-color: #f6f6f6;
+}
+
+body {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: #f6f6f6;
+}
+
+.space-44{height: 44px;}
+
+.storeManage-seller-list{margin-top: 0px!important;}
+
+.sellProduct{margin: 0 40px!important;}
+
+.clearfix:before,.clearfix:after,.dl-horizontal dd:before,.dl-horizontal dd:after,.container:before,.container:after,.container-fluid:before,.container-fluid:after,.row:before,.row:after,.form-horizontal .form-group:before,.form-horizontal .form-group:after,.btn-toolbar:before,.btn-toolbar:after,.btn-group-vertical>.btn-group:before,.btn-group-vertical>.btn-group:after,.nav:before,.nav:after,.navbar:before,.navbar:after,.navbar-header:before,.navbar-header:after,.navbar-collapse:before,.navbar-collapse:after,.pager:before,.pager:after,.panel-body:before,.panel-body:after,.modal-footer:before,.modal-footer:after
+	{
+	display: table;
+	content: " "
+}
+
+.clearfix:after,.dl-horizontal dd:after,.container:after,.container-fluid:after,.row:after,.form-horizontal .form-group:after,.btn-toolbar:after,.btn-group-vertical>.btn-group:after,.nav:after,.navbar:after,.navbar-header:after,.navbar-collapse:after,.pager:after,.panel-body:after,.modal-footer:after
+	{
+	clear: both
+}
+
+
+.sea-area{background-color: #fff;border: 1px solid #ddd;padding: 10px 5px;margin-bottom: 10px;position: relative;}
+.sea-area .blc-fl>select{border: none;width: 48%;text-align: center;height: 25px;padding: 0px 5px;}
+.sea-area .blc-fl>select:FIRST-CHILD{border-right: 1px solid #ddd;}
+.sea-area .blc-fl>a{
+	background-color: #f0f0f0;
+	color: #999;
+	text-decoration: none;
+	width: 90px;
+	padding: 5px 5px;
+	display: inline-block;
+	border-radius:20px;
+	text-align: center;
+	border: 1px solid #ddd;
+}
+.sea-area .all_check{
+	position: absolute;
+	right: 10px;
+	font-size: 25px;
+    color: #999;
+    top: 13px;
+}
+
+.item{position: relative;}
+.item .all_check{
+	position: absolute;
+	right: 2px;
+	top: 13px;
+	font-size: 25px;
+    color: #999;
+}
+.all_checked {
+    color: #E70012!important;
+}
+
+.btn-canuse{
+    border: 1px solid #E70012!important;
+    background-color: #fff!important;
+    color: #E70012!important;
+}
+
+@font-face {font-family: 'iconfont-gl';
+    src: url('/nanny/fonts/iconfont-gl.eot'); /* IE9*/
+    src: url('/nanny/fonts/iconfont-gl.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/nanny/fonts/iconfont-gl.woff') format('woff'), /* chrome、firefox */
+    url('/nanny/fonts/iconfont-gl.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('/nanny/fonts/iconfont-gl.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont-gl{
+    font-family:"iconfont-gl" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}

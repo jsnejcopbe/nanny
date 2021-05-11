@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" http-equiv="Content-Type" />
+<title>宝贝详情</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<link rel="stylesheet" href="css/common.css" />
+<link rel="stylesheet" type="text/css" href="css/proList.css" />
+<style type="text/css">
+.bottombox {
+	background-color: #CCC;
+	width: 100%;
+}
+.fixed-bottom {
+	position: fixed;
+	bottom: 0;
+	border: #ccc solid 1px;
+	box-shadow: 0px 0px 10px #ccc;
+}
+.btn {
+	background-color: #D2340F;
+	color: white;
+	text-decoration: none;
+	font-family: Arial;
+	font-weight: 900;
+	font-size: 15px;
+	padding: 10px 13px;
+	border-radius: 3px;
+}
+.btn-buynow {
+	background-color: #D2340F;
+}
+.btn-buynow:hover {
+	background-color: #EF411A;
+}
+</style>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/map.js"></script>
+<script type="text/javascript" src="js/jquery.matchslides.min.js"></script>
+<script type="text/javascript" src="js/imgReady.js"></script>
+<script type="text/javascript" src="js/jquery.event.drag-1.5.min.js"></script>
+<script type="text/javascript" src="js/jquery.touchSlider.js"></script>
+<script type="text/javascript" src="js/jquery.lazyload.min.js"></script>
+<script type="text/javascript" src="js/product.js"></script>
+</head>
+<body class='new_bod_bg'>
+<div id='error_infors'><span></span></div>
+<div id="hiddenLayer">
+<div class="new_wap_con">
+<div class="shop_header">
+  <div class="shop_head_fl"> <a href="/wap/wapIndex.jsp;jsessionid=939D7AE633C427694288E21BD03A6EF5-3.e?uuniq=1451977333701263" id='p_go'><img alt="" src="http://rep3.mmb.cn/wap/upload/touch/newWap/icon/hd_lt.png"></a> </div>
+  <div class="shop_head_fm">
+    <h1>商品详情</h1>
+  </div>
+  <div class="shop_head_fr" id="shop_open_down"> <a href="javascript:void(0)"><img alt="" src="http://rep3.mmb.cn/wap/upload/touch/newWap/icon/hd_rt.png"></a> </div>
+  <!-- 下拉菜单  -->
+  <div class="shop_down_ul" style="display: none;">
+    <ul class="shop_out_ul">
+      <li> <a href="javascript:void(0)" onclick="addProductCollection('/wap',412934);"> <img class="succ_procoll" src="http://rep3.mmb.cn/wap/upload/touch/newWap/icon/shopPro3.png"> <span id="old_coll">收藏</span> </a> </li>
+      <li class="shop_no_bot"> <a href="javascript:void(0)" id="shop_open_share"> <img src="http://rep3.mmb.cn/wap/upload/touch/newWap/icon/shopPro40.png">分享 </a> </li>
+    </ul>
+    <span class="shop_sj"></span> </div>
+  <div class="shop_in_ul" style="display: none;">
+    <div class="share_icons"> <a href="javascript:void(0)" onclick="share_product('qzone')"> <img src="http://rep3.mmb.cn/wap/upload/touch/newWap/icon/pro08.png"> <span>QQ空间</span> </a> <a href="javascript:void(0)" onclick="share_product('qqt')"> <img src="http://rep3.mmb.cn/wap/upload/touch/newWap/icon/pro06.png"> <span>腾讯微博</span> </a> <a href="javascript:void(0)" onclick="share_product('sina')"> <img src="http://rep3.mmb.cn/wap/upload/touch/newWap/icon/pro07.png"> <span>新浪微博</span> </a> </div>
+    <a class="shop_close_tc" onclick="hiddenDiv()">关闭</a> </div>
+</div>
+<div class="shop_down_bg" onclick="hiddenDiv()" style="display: none;"></div>
+<div class="container" style="position:relative;background-color: #ffffff;"  id="ls_con"> 
+  <!-- 首页图片  -->
+  <div class="main_visual min_main_vis" id='pro_slider'>
+    <div class="main_image">
+      <ul>
+        <li><img data-original="img/1.jpg" src='http://rep3.mmb.cn/wap/upload/touch/newWap/icon/load.gif' class='lazy' alt="正在加载图片...." /></li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- 标题部分()商品名称和活动状况)  -->
+  <div class="jdGoods">
+    <p id='js_title'>青苹果&红苹果</p>
+    <h1> <em id='product_price' style="float:left;" >￥109.0</em> &nbsp;
+      <p style="text-decoration:line-through; float:left;">￥259.00</p>
+    </h1>
+    <div class="order_line"></div>
+    <h2>
+      <div class="pro_active">
+        <p> &nbsp;&nbsp;活动</p>
+      </div>
+    </h2>
+   <div class="order_line"></div>
+    <p style=" float:left;">
+    
+    <div style=" display:inline-block; position:relative;left:10px;"> 品&nbsp;&nbsp;&nbsp;牌&nbsp;:</div>
+    <p style=" display:inline-block; font-weight: 500;color: #333;font-size:18px;"> 红富士</p>
+    </p>
+    
+    
+    <p style=" float:left;">
+    <div class="order_line"></div>
+    <span style=" display:inline-block; position:relative;left:10px;"> 产&nbsp;&nbsp;&nbsp;地&nbsp;:</span>
+    <p style=" display:inline-block; font-weight:blod;color: #333;font-size:18px;"> 渭北黄土高原 </p>
+    </p>
+    
+    <p style=" float:left;">
+    <div class="order_line"></div>
+    <span style=" display:inline-block; position:relative;left:10px;"> 产&nbsp;品&nbsp;质&nbsp;量:</span>
+    <p style="display: inline-block; font-weight:500;color: #333; font-size: 18px;"> 精选优质 </p>
+    </p>
+  </div>
+  <!-- 购买  -->
+  
+  <div class="jdGoods2">
+    <p class="jdGoods" style="diaplay:block; line-height:50px;  position:fixed;right:0;bottom:0;width: 100%;height: 50px;z-index: 8;">&nbsp; <span class=""style="  font-weight: bold;font-size:18px;">添加商品:</span>
+      <input type="button" class="reduce" value="-" />
+      <input type="text" class="num" size="4" value="1" />
+      <input type="button" class="add" value="+" />
+      </span> <span class="">
+      <input type="image" src="img/2.png" onClick="" style="width:50px;height:50px; position:fixed;right:30px;bottom:0;width: 50px;height: 50px;z-index: 8;  ">
+      </span> </p>
+    <div id='new_feg'></div>
+  </div>
+  <div id='content_tab'>
+    <div class="main_li">
+      <ul>
+        <li> 
+          <!-- 商品信息 -->
+          <div class="pro_infor">
+          <h4>商品介绍</h4>
+          <p> 简约娇俏的小圆领,展现性感锁骨,婉约动人,立体肩部设计,细节凸显品质, 一字口袋设计,引领流行时尚,立体的裁剪,纯色的款式,将简约风发挥的淋漓尽致,尽显优雅时尚气质.</p>
+          <h4>图文详情</h4>
+          <div id='ajax_exchange'>
+            <p>▼收腰设计,展现窈窕身姿</p>
+            <p class='img_lazy'><img data-original="http://rep3.mmb.cn/wap/upload/productImage/p3/34/412934/19lt810w048000.jpg" src='http://rep3.mmb.cn/wap/upload/touch/newWap/icon/load.gif' alt="" /></p>
+            <p>▼收腰设计,展现窈窕身姿</p>
+            <p class='img_lazy'><img data-original="http://rep3.mmb.cn/wap/upload/productImage/p3/34/412934/19lt810w048000.jpg" src='http://rep3.mmb.cn/wap/upload/touch/newWap/icon/load.gif' alt="" /></p>
+            <p>▼收腰设计,展现窈窕身姿</p>
+            <p class='img_lazy'><img data-original="http://rep3.mmb.cn/wap/upload/productImage/p3/34/412934/19lt810w048000.jpg" src='http://rep3.mmb.cn/wap/upload/touch/newWap/icon/load.gif' alt="" /></p>
+            <p>▼收腰设计,展现窈窕身姿</p>
+            <p class='img_lazy'><img data-original="http://rep3.mmb.cn/wap/upload/productImage/p3/34/412934/19lt810w048000.jpg" src='http://rep3.mmb.cn/wap/upload/touch/newWap/icon/load.gif' alt="" /></p>
+          </div>
+        </li>
+        <li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <div class="foot_con">
+    <p class='bot_phone'> 联系方式：<a href="tel:4008869499">400-886-9499</a> </p>
+    <p class='bot_sb'> <a href='http://www.jsgsj.gov.cn:60101/keyLicense/templet/Company10-60.jsp'> <img src='http://rep3.mmb.cn/wap/upload/touch/newWap/icon/fo_dz.png' width='16px'/> </a> <span class="fo_ba">&nbsp;&nbsp;红苹果</span> </p>
+  </div>
+</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var nScrollTop=0;//滚动条滚动的高度  
+		 var scrollTopHeight=0;
+		 $(document).scroll(function(){  
+		        nScrollTop = $(this).scrollTop();  
+		 });  
+		 $("#back").click(function(){
+			 $(".tuitui").slideUp(1000, function (){ $(this).hide();});
+			});
+		 $(".bg").toggle(function(){
+			 $(".tuitui").slideDown(1000, function (){ $(this).show();});
+		 },function(){
+			 $(".tuitui").slideUp(1000, function (){ $(this).hide();});
+			});
+	 });
+</script> 
+<script type="text/javascript">
+	
+		var xsNum = 0;
+		//去除空格
+		function trim(str) {
+			return str.replace(/\s/g, "");
+		}	
+		var count = 1;
+		
+       /*商品数量加减*/
+		$(document).ready(function(){
+		    $('.add').each(function(){
+		        $(this).click(function(){
+		            var num=parseInt($(this).prev('.num').val());
+		            if((xsNum > 0) && (num+1 > xsNum)){
+		            	initError("限购"+xsNum+"件哦~");
+		            	$(this).addClass("error");
+		            	$(this).prev('.num').val(xsNum);
+		            }else{
+		            	$(this).prev('.num').val(num+1);
+		            }
+		            $(".reduce").removeClass("error");
+		        })
+		    });
+		    $('.reduce').each(function(){
+		        $(this).click(function(){
+		            var num=parseInt($(this).next('.num').val());
+		            if(num >1){
+		                $(this).next('.num').val(num-1);
+		            }else{
+		                $(this).next('.num').val(1);
+		            }
+		            if(num==2){$(this).addClass("error");}
+		            $(".add").removeClass("error");
+		        })
+		    });
+		});
+</script> 
+<script type="text/javascript">
+		$(document).ready(function(){
+			$("#shop_open_down").click(function(){
+				$(".shop_down_bg").show();
+				$(".shop_down_ul").slideDown(500);
+			});
+			$("#shop_open_share").click(function(){
+				$(".shop_in_ul").slideDown(500);
+				$(".shop_down_ul").hide();
+			});
+			$(".shop_close_tc").click(function(){
+				hiddenDiv();
+			});
+		});
+</script> 
+<script>
+function fixDown(boxId){
+	var box = document.getElementById(boxId);
+	var cn = box.className;
+	var bh=box.offsetTop;
+	var wh=document.documentElement.clientHeight;//这里为了兼容IE，所以不能用window.innerHeight;
+	if(bh >= wh){
+	box.className = cn + " fixed-bottom";
+	}else{
+		box.className = cn;
+		}
+	}
+	window.onload=function(){fixDown("bb");}
+	window.onresize=function(){fixDown("bb");}
+</script>
+</body>
+</html>

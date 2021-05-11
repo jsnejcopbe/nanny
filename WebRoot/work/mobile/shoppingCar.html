@@ -1,0 +1,116 @@
+<!-- 购物车 -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>我的购物车</title>
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="format-detection"content="telephone=no, email=no" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="renderer" content="webkit"> <!-- 360浏览器指定默认极速模式 -->
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" > <!-- 优先用Chrome渲染 -->
+
+<link rel="stylesheet" type="text/css" href="css/vshopBase.css">
+<link rel="stylesheet" type="text/css" href="css/vshop.css">
+<link rel="stylesheet" type="text/css" href="css/vshopOrders.css">
+	<link rel="stylesheet" type="text/css" href="css/vshopBase.css">
+<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+<style>
+	.m-opens {-webkit-transform: translateX(0%);}
+	.m-anim {-webkit-transition: transform 300ms ease;}
+	.body{overflow:hidden;}
+</style>
+
+</head>
+
+<body class="body-f6">
+	<!-- 头部内容 开始 -->
+	<header class="m-topbarbox">
+		<div class="m-topbar flexbox">
+			<a class="m-goback" href="javascript:history.go(-1);"><i class="iconfont"></i></a>
+			<div class="m-tlebox flex"><!--<div class="m-search"><input type="text" placeholder="搜索店铺内商品" ><i class="iconfont ic-search">&#xe61d;</i> </div>--></div>
+			<a class="m-moremenu" id="j-m-moremenu-vd" href="javascript:void(0)" data-flag="2"><i class="iconfont"></i></a>
+		</div>
+		<section class="m-menubox">
+			<!-----未登陆状态--------->
+			
+			<!-----登陆状态--------->
+			
+			<ul class="fixed">
+				<li><a class="menu-link" href="http://mp.soqi.cn/CD69E33ED687F1717CB0BCD31B48A3E7/szone"><span><i class="iconfont">&#xe644;</i></span><div class="name">分类</div></a></li>
+				<li><a class="menu-link" href="http://mp.soqi.cn/vd/tominishopmanagepage.xhtml?type=1"><span><i class="iconfont">&#xe615;</i></span><div class="name">我的微店</div></a></li>
+				<li><a class="menu-link" href="http://mp.soqi.cn/vd/findmcsls.xhtml"><span><em class="badge"></em><i class="iconfont">&#xe61c;</i></span><div class="name">购物车</div></a></li>
+				<li><a class="menu-link" href="http://mp.soqi.cn/login/loginOut.xhtml"><span><i class="iconfont">&#xe614;</i></span><div class="name">退出</div></a></li>
+			</ul>
+			
+		</section>
+	</header>
+	<!-- 头部内容 结束 -->
+	
+	<!-- 主体内容 购物车编辑-->
+	<!-- 购物车部分 -->
+	<div class="m-pagecont">
+		<ul class="order-main">
+			<li class="order-list">
+				<div class="order-shop clearfix">
+					<div class="store-all allinput">
+						<input type="checkbox" class="checkAll" name="storeCheck">
+					</div>
+					<div class="store-name-img">
+						<img src="./购物车_files/VD_MzMwNzU5.jpg-img120" alt="">
+						<h3>火哥的小铺</h3>
+					</div>
+					<div class="store-editor">编辑</div>
+				</div>
+				<div class="item-main clearfix" prd_id="60740">
+					<div class="data-info" style="display:none">{"id":60740,"name":"搜企VIP版名片","typev":"1年","price":660,"sprice":660,"num":1,"pid":10022,"color":"","vname":"火哥的小铺"}</div>
+					<div class="goods-check allinput">
+						<input type="checkbox" class="checkbox-click" name="subBox">
+					</div>
+					<div class="item-info">
+						<dl class="goods-mess clearfix">
+							<dt><img src="./购物车_files/PRO_DETAIL_SMALL_60740.jpg" alt=""></dt>
+							<dd>
+								<p id="text-slice">搜企VIP版名片</p>
+								<div class="goods-size">
+									<span>规格： 1年</span>
+								</div>
+								<div class="goods-num">
+									<p class="tit">数量：</p>
+									<input type="button" value="-" class="shop-pay-left">
+									<input type="text" value="1" maxlength="2" class="shop-num">
+									<input type="button" class="shop-pay-right" value="+">
+								</div>
+							</dd>
+						</dl>
+						<div class="single-price">
+							<span>￥660</span>
+							<span class="pricecy">￥660</span>
+						</div>
+						<div class="delete" style="height: 134px;">
+							<i class="iconfont"></i>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<!-- 购物车 结束 -->
+	<!-- 导航栏底部 -->
+	<div class="submitOrder shopCart">
+		<ul class="shopCart-flexbox">
+			<li class="checkall-style">
+				<input type="checkbox" class="checkAllBtn">
+				<span>全选</span>
+			</li>
+			<li class="totalP-s">合计: <span class="total-price">￥0.00</span></li>
+			<li class="btn-s">
+				<a>生成订单</a>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

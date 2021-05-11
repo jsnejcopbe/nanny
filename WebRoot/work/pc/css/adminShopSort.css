@@ -1,0 +1,77 @@
+html,body{height: 100%;width: 100%;}
+body{font-family: Microsoft YaHei;}
+a{text-decoration: none!important;}
+a:HOVER {text-decoration: none!important;}
+
+.panel-archon{border: 1px solid #ddd;}
+
+.pa-title{margin-top: 0px;color: rgb(103, 106, 108);}
+.pa-search .input-group>input{
+	border-bottom-right-radius: 0px;
+	border-top-right-radius: 0px;
+	border-right: none;
+}
+.pa-search .input-group-btn>button{
+	line-height: 21px;
+	border-bottom-left-radius: 0px;
+	border-top-left-radius: 0px;
+}
+
+.con-list{margin-top: 20px;}
+.con-list tr td{
+	height: 46px;
+	vertical-align: middle;
+	border: none;
+	color: rgb(103, 106, 108);
+}
+.con-img img{
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+}
+.con-name span{color: rgb(35, 82, 124);font-weight: bold;}
+
+.add-block{margin-bottom: 10px;}
+.add-block>h2{color: rgb(103, 106, 108);margin-top: 0px;}
+.add-block>p{margin: 0px 0px 10px 0px;color: rgb(103, 106, 108);}
+.add-block>.list-group{margin: 0px -15px;}
+.add-block .list-group-item:FIRST-CHILD{border-top: 1px solid #ddd;}
+.add-block .list-group-item{
+	border-radius: 0px;
+	line-height: 34px;
+	border-bottom: 1px solid #ddd;
+	border-left: none;
+	border-right: none;
+	border-top: 1px solid #ddd;
+}
+
+.pagin-area{text-align: center;}
+
+.label {
+    background-color: #d1dade;
+    color: #5e5e5e;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 3px 8px;
+    text-shadow: none;
+}
+
+.label-primary {
+    background-color: #1ab394;
+    color: #FFF;
+}
+
+@font-face {font-family: 'iconfont';
+    src: url('/nanny/fonts/iconfont-gl.eot'); /* IE9*/
+    src: url('/nanny/fonts/iconfont-gl.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/nanny/fonts/iconfont-gl.woff') format('woff'), /* chrome、firefox */
+    url('/nanny/fonts/iconfont-gl.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('/nanny/fonts/iconfont-gl.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont-gl{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,104 @@
+/**
+ * Created by Jeffery Wang.
+ * Create Time: 2015-06-16 19:52
+ * Author Link: http://blog.wangjunfeng.com
+ */
+#nativeShare {
+    font-size: 13px;
+}
+
+#nativeShare .label {
+    font-size: 20px;
+}
+
+#nativeShare .list {
+   display: -moz-box;
+   display: -webkit-box;
+   display: box;
+   width: 100%;
+}
+
+#nativeShare .list span {
+   display: block;
+   -webkit-box-flex: 1;
+   -moz-box-flex: 1;
+   box-flex: 1;
+   width:33.333%;
+   text-align: center;
+    margin: 10px 0;
+}
+
+#nativeShare .list span i {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+
+#nativeShare .weibo i {
+    background-image: url('http://7xiobb.com2.z0.glb.clouddn.com/weibo.png');
+    background-size: cover;
+}
+
+#nativeShare .weixin i {
+    background-image: url('http://7xiobb.com2.z0.glb.clouddn.com/weixin_friend.png');
+    background-size: cover;
+}
+
+#nativeShare .weixin_timeline i {
+    background-image: url('http://7xiobb.com2.z0.glb.clouddn.com/weixin.png');
+    background-size: cover;
+}
+
+#nativeShare .qq i {
+    background-image: url('http://7xiobb.com2.z0.glb.clouddn.com/qq.png');
+    background-size: cover;
+}
+
+#nativeShare .qzone i {
+    background-image: url('http://7xiobb.com2.z0.glb.clouddn.com/qqzone.png');
+    background-size: cover;
+}
+
+#nativeShare .more i {
+    background-image: url('http://7xiobb.com2.z0.glb.clouddn.com/more.png');
+    background-size: cover;
+}
+.ui-share-mask{position: fixed;width: 100%; left: 0; top: 0; bottom: 0; right: 0; z-index: 10002; background: rgba(50, 50, 50, 0.5);display:none;}
+.ui-shareTip-mask{position: fixed;width: 100%; left: 0; top: 0; bottom: 0; right: 0;opacity:1;}
+.shareTip{display:none;position: fixed;  left: 50%;  margin-left: -160px;  top: 50%;  margin-top: -32px; opacity:0;max-width:90%;padding:25px 20px;background-color:#fff;z-index: 10003;border-radius:10px;color:#666;font-size:1.4rem;-moz-box-shadow:2px 2px 5px #666; -webkit-box-shadow:2px 2px 5px #666; box-shadow:2px 2px 5px #666;}
+#nativeShare{position:fixed;width: 100%; left: 0; bottom: 0; right: 0; z-index: 10003;background-color:#fff;-webkit-transform: translate3d(0, 100%, 0); transform: translate3d(0, 100%, 0);}
+#nativeShare.cur{-webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0);}
+#nativeShare h1{padding:20px 0;color:#f27a55;font-size:1.6rem;text-align:center;background-color:#fff;border-bottom:1px solid #dbdbdb;}
+#nativeShare .list{padding-top:10px;}
+.canclebox{padding:0 10px;}
+.cancleBtn{display:block;height:44px;line-height:44px;text-align:center;color:#007aff;border-radius:5px;margin:10px 0;background-color:#e5e5e5;font-size:1.8rem;}
+.m-anim {-webkit-transition: -webkit-transform 500ms ease; -webkit-transition-duration: 500ms; -moz-transition: -moz-transform 500ms ease; transition: transform 500ms ease; }
+.fadeOut { -webkit-animation: fadeInOut 4s linear;  opacity: 0;}
+.fadeHide{ -webkit-animation: fadeHide 4s; opacity:0;  }
+@-webkit-keyframes  fadeInOut{
+	0%{opacity:1;}
+	50%{opacity:1;}
+	100%{opacity:0;}
+}
+@-webkit-keyframes  fadeHide{
+	0%{opacity:1;}
+	90%{opacity:1;}
+	100%{opacity:0;}
+}
+.ShareTips{display:none;}
+.ShareTips-mask{position:fixed;top:0;bottom:0;left:0;right:0;background:rgba(0,0,0,0.5);z-index:10000;}
+.ShareTips-circle{position:fixed;right:10px;top:20px;width:50px;z-index:10001;}
+.ShareTips-finger{position:fixed;right:5px;top:5px;width:50px;z-index:10001;-webkit-animation: move 1.5s linear infinite;}
+.ShareTips-txt{position:fixed;right: 54px;top: 24px;width: 180px;z-index:10001;}
+.sharetips-know{position:fixed;left:50%;top:150px;width:130px;z-index:10001;margin-left:-65px;}
+.sharetips-line{position:fixed;left:10px;right:10px;top:200px;;z-index:10001;}
+ div img{width:100%;}
+ @-webkit-keyframes move {
+	 0%{-webkit-transform:translate3d(0, 0, 0);}
+	25%{-webkit-transform:translate3d(0, -5px, 0);}
+	 50%{-webkit-transform:translate3d(0, 0, 0);}
+	 75%{-webkit-transform:translate3d(0, 5px, 0);}
+	 100%{-webkit-transform:translate3d(0, 0, 0);}
+ }

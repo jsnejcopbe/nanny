@@ -1,0 +1,142 @@
+body,html{height: 100%;width: 100%;}
+body{font-family: Microsoft YaHei;background-color: #f0f0f0}
+a{text-decoration: none!important;}
+
+.sh-top{
+	width: 100%;
+	z-index: 1005;
+	position: fixed;
+	top: 0px;
+}
+.sh-top .top-con{
+	width: 100%;
+	background-color: #f8f8f8;
+	box-shadow: 0 1px 2px #cfcfcf;
+	padding: 6px 0px;
+}
+.top-con>div{font-size: 14px;color: #999;text-align: center;padding-top: 5px;}
+.top-con .sh-icon-left{text-align: left;display: block;padding-right: 0px;}
+.sh-icon-left>i{font-size: 22px;color: #333}
+.top-con .sh-icon-right{text-align: right;display: block;padding-top: 5px;color: #999;padding-left: 0px;}
+.top-con .con-sec{text-align: left!important;padding: 0px;}
+.con-sec .sec-inp{
+	display: inline-block;
+	border: 1px solid #ddd;
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 0px 5px;
+	width: 100%;
+	position: relative;
+}
+.con-sec .sec-inp>a{
+	color: #777;
+	display: inline-block;
+	font-size: 20px;
+	position: absolute;
+	right: 5px;
+	top: 0px;
+	display: none;
+}
+.con-sec .sec-inp>input{width: 86%;border: none;font-size: 12px;line-height: 27px;}
+.con-sec .sec-btn{padding: 6px 10px;font-size: 12px;background-color: #E70012;color: #fff;border-radius: 5px;}
+
+.sec-tab{margin-top: 10px;}
+.tab-item .it-fircla{color: #999;}
+.tab-item .it-seccla{
+	display: block;
+	border: 1px solid #ddd;
+	background-color: #fff;
+	color: #333;
+	text-align: center;
+	padding: 10px 0px;
+	border-radius: 15px;
+}
+.tab-item>div{padding: 0px 5px;margin-bottom: 10px;}
+
+.sec-reu{margin-top: 10px;}
+.reu-item>div{padding: 0px 5px;margin-bottom: 10px;}
+.reu-item .item-con{background-color: #fff;padding: 5px;position: relative;}
+.item-con>p{margin-bottom: 5px;width: 100%;}
+.item-con .con-cover>img{width: 100%;max-height: 120px;}
+.item-con .con-title{
+	font-size: 12px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+    white-space: nowrap;
+}
+.item-con .con-disprice{color: #E70012;}
+.item-con .con-orgprice{color: #999;text-decoration: line-through;font-size: 12px;}
+.item-con .btn-area{position: absolute;bottom: 0px;right: 5px;}
+.btn-area .btn-add{color: #E70012;}
+.btn-area .btn-add>i{font-size: 25px;}
+.btn-area .btn-del{display: none;}
+.btn-area .btn-del>i{color: #999;font-size: 25px;}
+.btn-area .tip-procount{display: none;font-size: 20px;}
+
+.sec-pagin{display: none;}
+.sec-pagin>a{display: block;text-align: center;margin-top: 10px;}
+
+.sm-bot{
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	background-color: #fff;
+	z-index:1005;
+	border-top: 1px solid #ddd;
+}
+.sm-bot .bot-pay{padding: 5px 0px;/* display: none; */}
+.bot-pay>.left{
+	float: left;
+    text-align: center;
+    margin-left: 10px;
+   }
+.bot-pay .left>span:FIRST-CHILD{
+    font-size: 25px;
+    color: #E70012;
+    margin: 0px;
+}
+.bot-pay .left>span:LAST-CHILD{
+    margin: 0px;
+    color: #333;
+    font-size: 12px;
+}
+.bot-pay>.right{
+	float: right;
+    padding-top: 10px;
+    width: 105px;
+}
+.bot-pay .right>a{
+	text-align: center;
+	padding: 5px;
+	color:#E70012;
+	border:1px solid #E70012; 
+	border-radius: 5px;
+	background-color: #fff;
+}
+.bot-pay .useless{color: #999!important;border: 1px solid #ddd!important;}
+
+
+.btn-closebtn {
+    background-color: #fff!important;
+    border: 1px solid #ff3c3c!important;
+    margin-top: 10px;
+    color: #ff3c3c!important;
+}
+.space43{height: 43px;}
+.space50{height: 50px;}
+@font-face {font-family: 'iconfont';
+    src: url('/nanny/fonts/iconfont-gl.eot'); /* IE9*/
+    src: url('/nanny/fonts/iconfont-gl.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/nanny/fonts/iconfont-gl.woff') format('woff'), /* chrome、firefox */
+    url('/nanny/fonts/iconfont-gl.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('/nanny/fonts/iconfont-gl.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont-gl{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.js-send{font-size: 20px;}

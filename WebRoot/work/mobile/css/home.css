@@ -1,0 +1,75 @@
+body,html{height: 100%;width: 100%;}
+body{background-color: #F0F0F0;font-family: Microsoft YaHei;}
+body a{text-decoration: none!important;}
+
+.ho-navbar{background-color: #fff;padding-top: 10px;}
+.ho-navbar .bar-item{
+	display: block;
+	text-align: center;
+	font-size: 12px;
+	color: #333;
+	margin-bottom: 10px;
+}
+.bar-item>img{width: 85%;}
+
+.ho-shop{margin-top: 10px;}
+.ho-shop .shop-item{margin-bottom: 10px;padding: 0px 10px;}
+.ho-shop .shop-item>img{width: 100%;}
+
+.sm-bot{
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	background-color: #fff;
+	z-index:1005;
+	border-top: 1px solid #ddd;
+}
+.sm-bot>a{display: block;text-align: center;padding: 0px;position: relative;} 
+.sm-bot>a i{color: #999;font-size: 18px;}
+.sm-bot>a span{display: block;text-align: center;font-size: 10px;color: #999;}
+.sm-bot .bot-pay{padding: 5px 0px;display: none;}
+.bot-pay>.left{
+	float: left;
+    text-align: center;
+    margin-left: 10px;
+   }
+.bot-pay .left>span:FIRST-CHILD{
+    font-size: 25px;
+    color: #E70012;
+    margin: 0px;
+}
+.bot-pay .left>span:LAST-CHILD{
+    margin: 0px;
+    color: #333;
+    font-size: 12px;
+}
+.bot-pay>.right{
+	float: right;
+    padding-top: 10px;
+    width: 120px;
+}
+.bot-pay .right>a{
+	text-align: center;
+	padding: 5px;
+	color:#E70012;
+	border:1px solid #E70012; 
+	border-radius: 5px;
+	background-color: #fff;
+}
+
+
+.space41{height: 41px;}
+@font-face {font-family: 'iconfont';
+    src: url('/nanny/fonts/iconfont-gl.eot'); /* IE9*/
+    src: url('/nanny/fonts/iconfont-gl.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/nanny/fonts/iconfont-gl.woff') format('woff'), /* chrome、firefox */
+    url('/nanny/fonts/iconfont-gl.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('/nanny/fonts/iconfont-gl.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont-gl{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}

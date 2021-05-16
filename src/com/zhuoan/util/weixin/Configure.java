@@ -10,7 +10,9 @@ public class Configure {
 	private static String key = "0033e6b96fb0425c926282d621693af7";
 	
 	//微信分配的公众号ID（开通公众号之后可以获取到）
-	private static String appID = "wx6024d36d55162a6a";//wx6024d36d55162a6a
+	private static String appID = "wxc64027edb6c615b4";//wx6024d36d55162a6a	wxc64027edb6c615b4
+	
+	private static String appSecret = "4f7df7e54307970f64d4b1a55c9ebcf8";
 
 	//微信支付分配的商户号ID（开通公众号的微信支付功能之后可以获取到）
 	private static String mchID = "1316254601";
@@ -59,6 +61,16 @@ public class Configure {
 	public static String getMchid(){
 		return mchID;
 	}
+	
+
+	public static String getAppSecret() {
+		return appSecret;
+	}
+
+	public static void setAppSecret(String appSecret) {
+		Configure.appSecret = appSecret;
+	}
+
 
 	//微信授权 start
 	public static String appKey="7c986dc3622502d514393b4a35b2e221";//7c986dc3622502d514393b4a35b2e221

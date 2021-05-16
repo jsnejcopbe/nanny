@@ -23,7 +23,7 @@
 		</property>
 		<property name="driverUrl" value="jdbc:mysql://localhost:3306/nanny?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8"></property>
 		<property name="user" value="root"></property>
-		<property name="password" value="root"></property>
+		<property name="password" value=""></property>
 	</bean>
 	
 	<bean id="sessionFactory"

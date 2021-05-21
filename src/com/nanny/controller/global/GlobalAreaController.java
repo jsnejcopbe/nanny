@@ -25,6 +25,7 @@ import com.zhuoan.shh.biz.SSHUtilBiz;
 import com.zhuoan.ssh.bean.QueryParam;
 import com.zhuoan.util.CookiesUtil;
 import com.zhuoan.util.HttpReqUtil;
+import com.zhuoan.util.weixin.WeiXinJsConfigUtil;
 
 
 
@@ -225,6 +226,8 @@ public class GlobalAreaController {
 			request.setAttribute("name",name1);
 			
 			int url= (Integer) request.getSession().getAttribute(Dto.PLAT_TYPE_NAME);
+			
+			WeiXinJsConfigUtil.apply(request);
 			
 			return Dto.getPagePath(url)+"/Globalname";
 		}catch (Exception e) {

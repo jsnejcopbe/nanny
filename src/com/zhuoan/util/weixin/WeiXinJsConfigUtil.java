@@ -24,11 +24,15 @@ public class WeiXinJsConfigUtil {
 	private static final String access_token_url = "https://api.weixin.qq.com/cgi-bin/token";
 	
 	private static String access_token = "";
-	private static long expires = 0;
+	private static long token_expires = 0;
+	
+	private static final String ticket_url = "https://api.weixin.qq.com/cgi-bin/ticket/getticket";
+	private static String ticket = "";
+//	private static long ticket_expires = 0;
 	
 	public static String getAccessToken(){
 		
-		if(System.currentTimeMillis()-expires > 0)
+		if(System.currentTimeMillis()-token_expires > 0)
 			//重新获取token
 			return refresh();
 		else
@@ -38,15 +42,22 @@ public class WeiXinJsConfigUtil {
 	
 	private static String refresh(){
 		
-		String restul = HttpReqUtil.doGet(access_token_url, "grant_type=client_credential&appid="+Configure.getKey()+"&secret="+Configure.getAppSecret(), "utf-8");
+		String result = HttpReqUtil.doGet(access_token_url, "grant_type=client_credential&appid="+Configure.getKey()+"&secret="+Configure.getAppSecret(), "utf-8");
 		
-		JSONObject object = JSONObject.fromObject(restul);
-		if(object.has("errcode")){
+		JSONObject token_json = JSONObject.fromObject(result);
+		if(token_json.has("errcode")){
 			return "";
 		}
 		
-		access_token = object.getString("access_token");
-		expires = System.currentTimeMillis() + object.getLong("expires_in")*1000;
+		access_token = token_json.getString("access_token");
+		token_expires = System.currentTimeMillis() + token_json.getLong("expires_in")*1000;
+		
+		result = HttpReqUtil.doGet(ticket_url, "access_token="+access_token+"&type=jsapi", "utf-8");
+		JSONObject ticket_json = JSONObject.fromObject(result);
+		if(ticket_json.get("errcode").equals("0")){
+			ticket = ticket_json.getString("ticket");
+		}
+		
 		
 		return access_token;
 	}
@@ -63,11 +74,16 @@ public class WeiXinJsConfigUtil {
 		request.setAttribute("appId", Configure.getAppid());
 		request.setAttribute("timestamp", timestamp);
 		request.setAttribute("nonceStr", nonceStr);
-		request.setAttribute("signature", sign("","",timestamp,nonceStr));
+		request.setAttribute("signature", sign(ticket,getRequestUrl(),timestamp,nonceStr));
 		
 	}
 	
-	public static String sign(String jsapi_ticket, String url,String timestamp,String nonceStr) {
+	private static String getRequestUrl(){
+		return "";
+	}
+	
+	
+	private static String sign(String jsapi_ticket, String url,String timestamp,String nonceStr) {
         String string1;
         String signature = "";
 

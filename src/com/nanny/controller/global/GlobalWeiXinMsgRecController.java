@@ -34,6 +34,7 @@ import com.zhuoan.util.DateUtils;
 import com.zhuoan.util.MathDelUtil;
 import com.zhuoan.util.TimeUtil;
 import com.zhuoan.util.weixin.Doweixin;
+import com.zhuoan.util.weixin.WeixinServletTokenCheckUtil;
 import com.zhuoan.util.weixin.WeixinUserMsgPush;
 import com.zhuoan.util.weixin.XMLParser;
 
@@ -75,10 +76,12 @@ public class GlobalWeiXinMsgRecController extends GlobalCommonExtend {
 	 */
 	@RequestMapping("wxmsgrec")
 	public void receiveWeiXinMsg(HttpServletRequest request,HttpServletResponse response) throws IOException, ParserConfigurationException, SAXException{
+		/*
 		//0.读取传入参数
 		String result =Dto.receivePostMsg(request.getInputStream());
 		Dto.writeLog("into wxservicemsg recevie now time is: "+TimeUtil.getNowDate("yyyy-MM-dd HH:mm:ss")+" and receive msg is: "+ result);
 		Dto.printMsg(response, "success");
+		
 		
 		//1.xml转化
 		Map<String,Object> mapXML = XMLParser.getMapFromXML(result);
@@ -126,17 +129,21 @@ public class GlobalWeiXinMsgRecController extends GlobalCommonExtend {
 				Dto.printMsg(response, createWeiXinTextMsg(backMsg, openId));
 		}else
 			Dto.printMsg(response, "received!");//返回消息，让微信停止推送
+		
 	}
+	*/
+	
 //		服务器配置tocken验证
-//		String signature=request.getParameter("signature");//验证签名
-//		String timestamp=request.getParameter("timestamp");//时间戳
-//		String nonce=request.getParameter("nonce");   
-//		String echostr=request.getParameter("echostr"); 
-//		
-//		System.out.println("the sign send by weixin is "+signature+"\n");
-//		
-//		if(WeixinServletTokenCheckUtil.checkSignature(signature, timestamp, nonce))
-//			Dto.printMsg(response, echostr);
+		String signature=request.getParameter("signature");//验证签名
+		String timestamp=request.getParameter("timestamp");//时间戳
+		String nonce=request.getParameter("nonce");   
+		String echostr=request.getParameter("echostr"); 
+		
+		System.out.println("the sign send by weixin is "+signature+"\n");
+		
+		if(WeixinServletTokenCheckUtil.checkSignature(signature, timestamp, nonce))
+			Dto.printMsg(response, echostr);
+	}
 /******************************************************辅助方法*********************************************************************/	
 	
 	/**

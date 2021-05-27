@@ -25,7 +25,7 @@ import com.zhuoan.shh.biz.SSHUtilBiz;
 import com.zhuoan.ssh.bean.QueryParam;
 import com.zhuoan.util.CookiesUtil;
 import com.zhuoan.util.HttpReqUtil;
-import com.zhuoan.util.weixin.WeiXinJsConfigUtil;
+import com.zhuoan.util.weixin.WeiXinJsApiConfigUtil;
 
 
 
@@ -121,7 +121,7 @@ public class GlobalAreaController {
 		    
 		    String ip1="117.24.57.197";
 		    String path="http://ip.taobao.com/service/getIpInfo.php"; 
-		    String city= HttpReqUtil.doGet(path, "ip="+ip1, "utf-8");
+		    String city= HttpReqUtil.doGet(path, "ip="+ip, "utf-8");
 		    
 		    Dto.writeLog("city:"+city+"\n");
 		    
@@ -170,14 +170,14 @@ public class GlobalAreaController {
 			//request.setCharacterEncoding("utf-8");
 			
 			String city=request.getParameter("city");
-//			if(city!=null){
-//				city=new String(city.getBytes("ISO-8859-1"), "UTF-8");
-//			}
+			if(city!=null){
+				city=new String(city.getBytes("ISO-8859-1"), "UTF-8");
+			}
 			System.out.println(city);
 			String name=request.getParameter("addname");
-//			if(name!=null){
-//				name=new String(name.getBytes("ISO-8859-1"), "UTF-8");
-//			}
+			if(name!=null){
+				name=new String(name.getBytes("ISO-8859-1"), "UTF-8");
+			}
 			
 			System.out.println(name);
 			paramMap.put("city", "%"+city+"%");
@@ -213,21 +213,21 @@ public class GlobalAreaController {
 			}
 			
 			String city1=request.getParameter("city");
-//			if(city1!=null){
-//				city1=new String(city1.getBytes("ISO-8859-1"), "UTF-8");
-//			}
+			if(city1!=null){
+				city1=new String(city1.getBytes("ISO-8859-1"), "UTF-8");
+			}
 			request.setAttribute("city",city1);
 			System.out.println(city1);
 			
 			String name1=request.getParameter("addname");
-//			if(name1!=null){
-//				name1=new String(name1.getBytes("ISO-8859-1"), "UTF-8");
-//			}
+			if(name1!=null){
+				name1=new String(name1.getBytes("ISO-8859-1"), "UTF-8");
+			}
 			request.setAttribute("name",name1);
 			
 			int url= (Integer) request.getSession().getAttribute(Dto.PLAT_TYPE_NAME);
 			
-			WeiXinJsConfigUtil.apply(request);
+			request.setAttribute("weiXinJsApiConfig",WeiXinJsApiConfigUtil.get(request));
 			
 			return Dto.getPagePath(url)+"/Globalname";
 		}catch (Exception e) {

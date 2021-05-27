@@ -24,9 +24,13 @@
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/work/mobile/css/globalname.css">
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/layer/layer.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/js/base.js"></script>  
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/base.js?v=201610262115"></script>  
 <script type="text/javascript">
 var BASEPATH="${pageContext.request.contextPath}";
+
+wx.config(${weiXinJsApiConfig});
+
 </script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/work/mobile/js/globalname.js?v=0.02"></script>
 </head>

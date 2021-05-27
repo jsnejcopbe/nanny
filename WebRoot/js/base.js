@@ -353,9 +353,27 @@ var g_WifiLocation=(function(){
 		main:function(callBackFun){
 			if(callBackFun!=null)
 				this._callBack=callBackFun;
-			if (navigator.geolocation)
+			
+			var ua = window.navigator.userAgent.toLowerCase();
+			if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+				//微信的地理位置信息
+				wx.getLocation({
+				    type: 'wgs84', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'
+				    success: function (res) {
+				    	
+				    	var latitude = res.latitude; // 纬度，浮点数，范围为90 ~ -90
+				        var longitude = res.longitude; // 经度，浮点数，范围为180 ~ -180。
+				        var speed = res.speed; // 速度，以米/每秒计
+				        var accuracy = res.accuracy; // 位置精度
+				        
+				        console.log(latitude+","+longitude);
+				        
+				    	g_WifiLocation._callBack(latitude+","+longitude);
+				    }
+				});
+			} else if (navigator.geolocation){
 				navigator.geolocation.getCurrentPosition(this._fnSuccess,this._fnError,{enableHighAccuracy: true,maximumAge:1000});
-			else{
+			}else{
 				layer.msg("无法获得授权,请手动输入地址");
 				this._callBack("");
 			}

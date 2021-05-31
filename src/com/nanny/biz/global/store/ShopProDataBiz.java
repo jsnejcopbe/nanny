@@ -21,7 +21,7 @@ public interface ShopProDataBiz {
 	 * @param userID
 	 * @return
 	 */
-	public JSONArray getProListByClass(JSONArray classList,Long firstClassID,Long shopID);
+	public JSONArray getProListByClass(JSONArray classList,Long firstClassID,Long shopID,PageUtil pageUtil);
 	
 	/**
 	 * 根据条件查询商品数据
@@ -37,5 +37,5 @@ public interface ShopProDataBiz {
 	 * @param shopID
 	 * @return
 	 */
-	public JSONArray getProlistIsex(Long shopID);
+	public JSONArray getProlistIsex(Long shopID,PageUtil pageUtil);
 }

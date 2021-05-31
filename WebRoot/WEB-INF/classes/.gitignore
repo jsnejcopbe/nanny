@@ -1,1 +1,5 @@
+/META-INF/
 /com/
+/log4j.properties
+/spring.xml
+/springMVC-servlet.xml

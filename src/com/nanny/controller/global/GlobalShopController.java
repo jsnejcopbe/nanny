@@ -52,6 +52,8 @@ public class GlobalShopController {
 	@Resource(name="userViewShopRecBiz")
 	private UserViewShopRecBiz g_ViewRecBiz;
 	
+	private static final int defaultPageSize = 10;
+	
 	@RequestMapping("intro")
 	public String jumpToIntro(HttpServletRequest request,HttpServletResponse response){
 		return "intro/index.jsp";
@@ -144,8 +146,12 @@ public class GlobalShopController {
 		//2.获得首个一级分类下的二级分类
 		Long firstClassID=Long.valueOf(0);
 		
+		PageUtil pageUtil = new PageUtil();
+		pageUtil.setPageIndex(1);
+		pageUtil.setPageSize(defaultPageSize);
+		
 		//3.获得商铺可兑换商品
-		proData=g_ProDataBiz.getProlistIsex(shopID);
+		proData=g_ProDataBiz.getProlistIsex(shopID,pageUtil);
 		
 		//4.情景判断 
 		if(proParID!=null)
@@ -160,7 +166,7 @@ public class GlobalShopController {
 		{
 			//获得二级分类与集合下的所有商品
 			childClassList=g_ProTypeBiz.getChildClassByID(firstClassID);
-			proData=g_ProDataBiz.getProListByClass(childClassList, firstClassID, shopID);
+			proData=g_ProDataBiz.getProListByClass(childClassList, firstClassID, shopID,pageUtil);
 			firstClassName=getNowClassName(firstClassList, firstClassID);
 		}else{
 			firstClassName="";
@@ -213,15 +219,31 @@ public class GlobalShopController {
 		//0.获得传入参数
 		Long classID=Long.valueOf(request.getParameter("classID"));
 		Long shopID=Long.valueOf(request.getParameter("shopID"));
+		PageUtil pageUtil = null;
+		//分页信息
+		String pageIndex=request.getParameter("pageIndex");
+		if(pageIndex != null){
+			
+			pageUtil = new PageUtil();
+			pageUtil.setPageIndex(Long.valueOf(pageIndex).intValue());
+
+			String pageSize=request.getParameter("pageSize");
+			if(pageSize == null)
+				pageUtil.setPageSize(defaultPageSize);
+			else
+				pageUtil.setPageSize(Long.valueOf(pageSize).intValue());
+		}
+		
 		if(classID!=0)
 		{
 			//1.查询二级分类集合
 			JSONArray childClassList=g_ProTypeBiz.getChildClassByID(classID);
 			//2.查询二级分类下的所有商品合集
-			proData=g_ProDataBiz.getProListByClass(childClassList, classID, shopID);
+			proData=g_ProDataBiz.getProListByClass(childClassList, classID, shopID,pageUtil);
+			
 			//3.返回数据
 		}else
-			proData=g_ProDataBiz.getProlistIsex(shopID);
+			proData=g_ProDataBiz.getProlistIsex(shopID,pageUtil);
 		Dto.printMsg(response, proData.toString());
 	}
 	

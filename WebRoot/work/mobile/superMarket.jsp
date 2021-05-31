@@ -32,7 +32,7 @@
 
 <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/work/mobile/css/popup.css" />
 
-<link rel="stylesheet" href="${pageContext.request.contextPath}/work/mobile/css/supermarket.css?v=0.05" type="text/css"></link>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/work/mobile/css/supermarket.css?v=201610271640" type="text/css"></link>
 
 <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
 

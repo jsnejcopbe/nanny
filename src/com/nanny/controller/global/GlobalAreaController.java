@@ -112,6 +112,7 @@ public class GlobalAreaController {
 			
 
 				}
+		
 			String ip;
 		   if (request.getHeader("x-forwarded-for") == null) { 
 		        ip= request.getRemoteAddr();  
@@ -134,15 +135,19 @@ public class GlobalAreaController {
 		    }else{
 		    	
 		    	String name= msg.getJSONObject("data").getString("city");
-		    	String ctname=name.substring(0,name.length()-1);
+		    	
+		    	String ctname=name.substring(0,name.length()<1?0:(name.length()-1));
 		    	request.setAttribute("ctname", ctname);
 		    	request.setAttribute("code", code);
 		    }
+		    
 		    request.setAttribute("areaList", areaList);
 		    
 		    request.setAttribute("jump", request.getParameter("jump"));
 		    
 		    int url= (Integer) request.getSession().getAttribute(Dto.PLAT_TYPE_NAME);
+		    
+			request.setAttribute("weiXinJsApiConfig",WeiXinJsApiConfigUtil.get(request));
 		    
 		    return Dto.getPagePath(url)+"/Globalarea";
 		

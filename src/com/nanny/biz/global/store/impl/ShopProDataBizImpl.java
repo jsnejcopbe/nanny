@@ -21,7 +21,7 @@ public class ShopProDataBizImpl implements ShopProDataBiz {
 	@Resource
 	private SSHUtilDao dao;
 	
-	public JSONArray getProListByClass(JSONArray classList,Long firstClassID,Long shopID) {
+	public JSONArray getProListByClass(JSONArray classList,Long firstClassID,Long shopID,PageUtil pageUtil) {
 		//0.拼接sql
 		StringBuffer sql=new StringBuffer();
 		sql.append(" select sp.id,sp.name,sp.price,sp.disPrice,sp.cover,sp.buyCount,sp.viewCount,sp.typeID,st.name as className");
@@ -40,7 +40,7 @@ public class ShopProDataBizImpl implements ShopProDataBiz {
 		Object[] param={Dto.IS_SALE,shopID.intValue()};
 		
 		//1.查询数据
-		JSONArray array=JSONArray.fromObject(dao.getObjectListBySQL(sql.toString(), param, null));
+		JSONArray array=JSONArray.fromObject(dao.getObjectListBySQL(sql.toString(), param, pageUtil));
 		return createProJsonData(classList, array);
 	}
 
@@ -67,7 +67,7 @@ public class ShopProDataBizImpl implements ShopProDataBiz {
 	 * 16.03.22 hxq  
 	 * 新增shopid获取兑换商品
 	 */
-	public JSONArray getProlistIsex(Long shopID) {
+	public JSONArray getProlistIsex(Long shopID,PageUtil pageUtil) {
 		JSONArray isex=new JSONArray();
 		JSONObject prois=new JSONObject();
 		
@@ -83,7 +83,7 @@ public class ShopProDataBizImpl implements ShopProDataBiz {
 		
 		//1.查询数据
 		
-		JSONArray array=JSONArray.fromObject(dao.getObjectListBySQL(sql.toString(), param, null));
+		JSONArray array=JSONArray.fromObject(dao.getObjectListBySQL(sql.toString(), param, pageUtil));
 		//获取系统设置
 		 SystemSetup sts=(SystemSetup) dao.getObjectById(SystemSetup.class, 1L);
 				

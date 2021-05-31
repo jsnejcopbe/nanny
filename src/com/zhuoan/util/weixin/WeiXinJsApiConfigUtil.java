@@ -10,6 +10,8 @@ import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.util.StringUtils;
+
 import com.zhuoan.util.HttpReqUtil;
 
 import net.sf.json.JSONObject;
@@ -152,12 +154,15 @@ public class WeiXinJsApiConfigUtil {
 		
 		return json.toString();
 	}
-	
+	private static boolean isEmpty(Object str) {
+		return (str == null || "".equals(str));
+	}
 	private static String getRequestURL(HttpServletRequest request){
 		String url = "http://" + request.getServerName() // 服务器地址
 				+ request.getContextPath() // 项目名称
 				+ request.getServletPath() // 请求页面或其他地址
-				+ "?" + (request.getQueryString()); // 参数
+				+ (isEmpty(request.getQueryString())?"":("?" + (request.getQueryString())))
+				; // 参数
 
 		return url;
 	}

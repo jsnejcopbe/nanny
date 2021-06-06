@@ -46,6 +46,49 @@
 
 </c:if>
 
+<style type="text/css">
+
+.pro-con{
+	font-size: 0;
+}
+.pro-con .pro-item{
+	width: 50%;
+	display: inline-block;
+	border: none;
+	
+	font-size: 10px;
+}
+.pro-con .pro-item>a{
+	width: 100%;
+}
+.pro-con .pro-item>a img{
+	height: 125px!important;
+}
+.pro-con .pro-item>div{
+	width: 100%;
+}
+.pro-con .pro-item>div>p{
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+}
+.pro-con .pro-item>div>p.pro-name{
+	overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.pro-con .pro-item .btn-area{
+	right: 5%;
+}
+.pro-con .pro-item .pro-price .now{
+	line-height: 34px;
+}
+.pro-con .pro-item .exc-btn>a{
+	line-height: 20px;
+}
+</style>
+
 </head>
 
 
@@ -552,8 +595,21 @@
         });
 
     });
-
-    </script>
+		$(".page-con #wrap-left .menu-con").touchmove(function(){
+			console.log("===========================");
+		});
+		$(".page-con").on("touchmove", ".pro-con", function() {
+			var $this = $(this),
+				viewH = $(this).height(), //可见高度  
+				contentH = $(this).get(0).scrollHeight, //内容高度  
+				scrollTop = $(this).scrollTop(); //滚动高度  
+			//if(contentH - viewH - scrollTop <= 100) { //到达底部100px时,加载新内容  
+			if (scrollTop / (contentH - viewH) >= 0.95) { //到达底部100px时,加载新内容  
+				// 这里加载数据..
+				console.log("===========================");
+			}
+		});
+	</script>
 
 </body>
 

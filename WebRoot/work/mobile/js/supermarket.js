@@ -122,7 +122,7 @@ function getpro(classID,parName){
 		layer.load(1, {shade: [0.8,'#333']});
 		var param={
 			"sURL" :BASEPATH+"/shopproajax.json",
-			"Data" :"classID="+classID+"&shopID="+$("#shopID").val(),
+			"Data" :"classID="+classID+"&shopID="+$("#shopID").val()+"&pageIndex=1",
 			"fnSuccess" : function(data){
 				layer.closeAll('loading');
 

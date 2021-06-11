@@ -143,9 +143,11 @@ public class ShopProDataBizImpl implements ShopProDataBiz {
 				if(tmp2.getLong("typeID")==tmp.getLong("id"))
 					data.element(tmp2);
 			}
-			item.element("className", tmp.getString("name"));
-			item.element("data", data);
-			result.element(item);
+			if(data.size() > 0){
+				item.element("className", tmp.getString("name"));
+				item.element("data", data);
+				result.element(item);
+			}
 		}
 		return result;
 	}

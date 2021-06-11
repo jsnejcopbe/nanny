@@ -289,7 +289,7 @@
 
 			<!-- 右侧商品列表 -->
 
-			<div id="wrap-right-${firstClassID }" class="col-xs-9 js-wrap">
+			<div id="wrap-right-${firstClassID }" class="col-xs-9 js-wrap" pageIndex = "1">
 
 				<div class="pro-con" id="pro-con-${firstClassID }">
 
@@ -412,12 +412,8 @@
 
 				</c:forEach>
 
-				
-
-				
-
 				<div class="pro-logo"><img src="${pageContext.request.contextPath}/images/logo.jpg" style="width:100%;"></div>
-
+				
 				</div>
 
 			</div>
@@ -524,7 +520,9 @@
 
 	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.9.1.min.js"></script>
 
-	<script type="text/javascript" src="${pageContext.request.contextPath}/js/iscroll-lite.js?v=0.01"></script>
+	<!-- <script type="text/javascript" src="${pageContext.request.contextPath}/js/iscroll-lite.js?v=0.01"></script> -->
+	
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/iscroll-probe.js"></script>
 
 	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.scrollLoading.js"></script>
 
@@ -576,7 +574,7 @@
 
 	
 
-	<script type="text/javascript" src="${pageContext.request.contextPath}/work/mobile/js/supermarket.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/work/mobile/js/supermarket.js?v=20161029"></script>
 
 	<script type="text/javascript" src="${pageContext.request.contextPath}/work/mobile/js/loginalert.js"></script>
 
@@ -595,20 +593,6 @@
         });
 
     });
-		$(".page-con #wrap-left .menu-con").touchmove(function(){
-			console.log("===========================");
-		});
-		$(".page-con").on("touchmove", ".pro-con", function() {
-			var $this = $(this),
-				viewH = $(this).height(), //可见高度  
-				contentH = $(this).get(0).scrollHeight, //内容高度  
-				scrollTop = $(this).scrollTop(); //滚动高度  
-			//if(contentH - viewH - scrollTop <= 100) { //到达底部100px时,加载新内容  
-			if (scrollTop / (contentH - viewH) >= 0.95) { //到达底部100px时,加载新内容  
-				// 这里加载数据..
-				console.log("===========================");
-			}
-		});
 	</script>
 
 </body>

@@ -5,7 +5,7 @@ var PROHTML='<div class="pro-item clearfix" data-proid=${proID }>\				<a class=
 var totalCount=0;
 var wrap1;
 var wrap2;
-
+var loading = false;
 $(function(){
 	scorllerCount($("#firstClaID").val());
 //	layer.load(1, {shade: [0.8,'#333']});
@@ -115,37 +115,33 @@ function delFun(target){
  * 获得一级分类下的商品
  * @param proID
  */
-function getpro(classID,parName){
-	clearProData();
+function getpro(classID,parName){		clearProData();
 	if(showProduct(classID))
 	{
-		layer.load(1, {shade: [0.8,'#333']});
+//		layer.load(1, {shade: [0.8,'#333']});		//加载等待		var html=PROHTMLCON.replace("${conlist}", "")		   .replace(/(\${id})/g, classID);		$(".page-con").append(html);		$('#wrap-right-'+classID).attr('pageIndex',1);		
 		var param={
 			"sURL" :BASEPATH+"/shopproajax.json",
 			"Data" :"classID="+classID+"&shopID="+$("#shopID").val()+"&pageIndex=1",
 			"fnSuccess" : function(data){
-				layer.closeAll('loading');
-
-				var html=createHtml(data,parName);
-				html=PROHTMLCON.replace("${conlist}", html)
-							   .replace(/(\${id})/g, classID);
+//				layer.closeAll('loading');
+
+				var html=createHtml(data,parName,true);				$('#wrap-right-'+classID+' .pro-logo').before(html);
 				
-				$(".page-con").append(html);
 //				new g_fnImgCheck({"call":function(){layer.closeAll('loading');scorllerCount(classID);}});
-				scorllerCount(classID);
+				scorllerCount(classID,false);
 				
 				selectInit(classID);
 				
 				lazyLoadInit();
 			},
 			"fnError"   : function(){
-				layer.closeAll('loading');
+//				layer.closeAll('loading');
 				layer.msg("查询失败");
 			}
 		};
 		new g_fnAjaxUpload(param);
 	}
-}
+}function incrementPro(classID,parName,pageIndex){						$('#wrap-right-'+classID).attr('pageIndex',pageIndex);				var param={			"sURL" :BASEPATH+"/shopproajax.json",			"Data" :"classID="+classID+"&shopID="+$("#shopID").val()+"&pageIndex="+pageIndex,			"fnSuccess" : function(data){				loading = false;								if(data.length == 1 && data[0].data.length == 0){					$('#wrap-right-'+classID).attr("end","end");				}else{					var html = '';					$(data).each(function(){						var className = $('#wrap-right-'+classID+' .pro-span:contains('+this.className+')');						if(className.length == 0 && className != ""){							html=createHtml([this],parName,true);						}else{							html=createHtml([this],parName,false);						}					});					//					var html=createHtml(data,parName);					$('#wrap-right-'+classID+' .pro-logo').before(html);										clearProData();					showProduct(classID);					scorllerCount(classID,true);					selectInit(classID);					lazyLoadInit();				}			},			"fnError"   : function(){				loading = false;				layer.msg("查询失败");			}		};		new g_fnAjaxUpload(param);	}
 
 /**
  * 商品展示
@@ -161,7 +157,7 @@ function showProduct(classID){
 	if($("#wrap-right-"+classID).length!=0)
 	{
 		$("#wrap-right-"+classID).css("display","block");
-		scorllerCount(classID);
+		scorllerCount(classID,false);
 		return false;
 	}else
 		return true;
@@ -172,17 +168,17 @@ function showProduct(classID){
  * @param data
  * @returns {String}
  */
-function createHtml(data,parName){
+function createHtml(data,parName,is){
 	var html="";
 	for(var i=0;i<data.length;i++)
 	{
 		var className=data[i].className;//二级分类名
 		var proList=data[i].data;//二级分类下的商品
-		
-		if(className!=parName && proList.length>0)
-			html+='<div class="pro-span">'+className+'</div>';
-		else if(className==parName && proList.length>0)
-			html+='<div class="pro-span">其它</div>';
+		if(is){
+			if(className!=parName && proList.length>0)	
+				html+='<div class="pro-span">'+className+'</div>';	
+			else if(className==parName && proList.length>0)	
+				html+='<div class="pro-span">其它</div>';		}
 		
 		for(var k=0;k<proList.length;k++){
 			html+=PROHTML.replace(/(\${proID })/g, proList[k].id)
@@ -226,26 +222,20 @@ function lazyLoadInit(){
 
 /**
  * 计算滚动条长度
- */
-function scorllerCount(classID){
-	 $("#wrap-right-"+classID).css("height",scrHeight+"px");
+ */var y = 0;
+function scorllerCount(classID,increment){
+	 $("#wrap-right-"+classID).css("height",(scrHeight-130)+"px");
 	 $("#wrap-left").css("height",scrHeight+"px");
 	 var height=0;
 	 var itemHeight=0;
 	 $(".menu-con .menu-item").each(function(){
 		 height=parseInt(height)+parseInt($(this).outerHeight());
-	 });
-	 height=parseInt(height)+parseInt(166);
+	 });	 height=parseInt(height)+parseInt(166);
 	 $(".menu-con").css("height",height+"px");
 	 
-	 itemHeight=$("#pro-con-"+classID).height();
-	 $("#pro-con-"+classID).css("height",parseInt(itemHeight)+parseInt(90*4)+"px");
-	 
-	 //0.计算商品列表滚动条
-	 if(wrap1!=null)
-		 wrap1.destroy();
-	 wrap1=new IScroll('#wrap-right-'+classID, { disableMouse:true,HWCompositing:false, click:true});
-
+	 itemHeight=$("#pro-con-"+classID).height();//	 $("#pro-con-"+classID+">div").each(function(){////		 itemHeight=parseInt(height)+parseInt($(this).outerHeight());////	 });
+	 $("#pro-con-"+classID).css("height",parseInt(itemHeight)+parseInt(90*2)+"px");
+	 //0.计算商品列表滚动条	 	 if(wrap1!=null)		 wrap1.destroy();	 wrap1=new IScroll('#wrap-right-'+classID, { probeType: 2,disableMouse:true,HWCompositing:false, click:true});	 wrap1.on('scroll', function () {		if (loading)			return false;		if($('#wrap-right-'+classID).attr("end") == "end")			return false;		var residue = Math.abs(this.maxScrollY) - Math.abs(this.y)		if (residue < 200) {			loading = true;			y = this.y;			var name = $('.menu-item.selected>a').text();			var id = $('.menu-item.selected>a').attr("data-id");			var pageIndex = $(this.wrapper).attr("pageIndex");						incrementPro(id, name, parseInt(pageIndex) + 1);		}		return false;	});	 if(increment === true){		 wrap1.scrollTo(0, y,0);	 }	 
 	 //1.计算类别列表滚动条
 //	 if(wrap2!=null)
 //		 wrap2.destroy();
